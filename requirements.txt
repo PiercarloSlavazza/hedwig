@@ -4,3 +4,5 @@ Cython==0.28.2
 scikit-learn==0.19.1
 scipy==1.0.0
 torchtext==0.2.3
+boto3==1.9.229
+gensim==3.8.0
