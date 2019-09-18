@@ -11,6 +11,7 @@ from common.evaluate import EvaluatorFactory
 from common.train import TrainerFactory
 from datasets.aapd import AAPDHierarchical as AAPD
 from datasets.imdb import IMDBHierarchical as IMDB
+from datasets.wired import WiredHierarchical as Wired
 from datasets.reuters import ReutersHierarchical as Reuters
 from datasets.yelp2014 import Yelp2014Hierarchical as Yelp2014
 from models.han.args import get_args
@@ -82,6 +83,7 @@ if __name__ == '__main__':
         'Reuters': Reuters,
         'AAPD': AAPD,
         'IMDB': IMDB,
+        'Wired': Wired,
         'Yelp2014': Yelp2014
     }
 

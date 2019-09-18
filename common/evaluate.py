@@ -10,6 +10,7 @@ class EvaluatorFactory(object):
         'Reuters': ClassificationEvaluator,
         'AAPD': ClassificationEvaluator,
         'IMDB': ClassificationEvaluator,
+        'Wired': ClassificationEvaluator,
         'Yelp2014': ClassificationEvaluator,
         'Robust04': RelevanceTransferEvaluator,
         'Robust05': RelevanceTransferEvaluator,
@@ -25,7 +26,7 @@ class EvaluatorFactory(object):
             raise ValueError('Invalid dataset. Dataset should have NAME attribute.')
 
         if dataset_cls.NAME not in EvaluatorFactory.evaluator_map:
-            raise ValueError('{} is not implemented.'.format(dataset_cls))
+            raise ValueError('{} does not have a known Evaluator.'.format(dataset_cls))
 
         return EvaluatorFactory.evaluator_map[dataset_cls.NAME](
             dataset_cls, model, embedding, data_loader, batch_size, device, keep_results
