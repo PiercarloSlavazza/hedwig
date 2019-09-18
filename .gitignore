@@ -13,3 +13,5 @@ kim_cnn/data
 .results
 .qrel
 *.onnx
+/bert_ita
+/cache
