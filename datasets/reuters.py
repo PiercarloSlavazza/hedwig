@@ -10,7 +10,7 @@ from torchtext.data import NestedField, Field, TabularDataset
 from torchtext.data.iterator import BucketIterator
 from torchtext.vocab import Vectors
 
-csv.field_size_limit(sys.maxsize)
+csv.field_size_limit(50000)
 
 
 def clean_string(string):
@@ -125,7 +125,7 @@ class ReutersCharQuantized(Reuters):
 
 class ReutersTFIDF(Reuters):
     VOCAB_SIZE = 30485
-    TEXT_FIELD = Field(sequential=False, use_vocab=False, batch_first=True, preprocessing=load_json, dtype=torch.float)
+    TEXT_FIELD = Field(sequential=False, use_vocab=False, batch_first=True, preprocessing=load_json)
 
     @classmethod
     def splits(cls, path, train=os.path.join('Reuters', 'tfidf_train.tsv'),
