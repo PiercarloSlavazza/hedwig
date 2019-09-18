@@ -10,6 +10,7 @@ from common.trainers.bert_trainer import BertTrainer
 from datasets.bert_processors.aapd_processor import AAPDProcessor
 from datasets.bert_processors.agnews_processor import AGNewsProcessor
 from datasets.bert_processors.imdb_processor import IMDBProcessor
+from datasets.bert_processors.wired_processor import WiredProcessor
 from datasets.bert_processors.reuters_processor import ReutersProcessor
 from datasets.bert_processors.sogou_processor import SogouProcessor
 from datasets.bert_processors.sst_processor import SST2Processor
@@ -64,6 +65,7 @@ if __name__ == '__main__':
         'SST-2': SST2Processor,
         'Reuters': ReutersProcessor,
         'IMDB': IMDBProcessor,
+        'Wired': WiredProcessor,
         'AAPD': AAPDProcessor,
         'AGNews': AGNewsProcessor,
         'Yelp2014': Yelp2014Processor,
